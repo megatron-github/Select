@@ -23,11 +23,15 @@ fi
 Implementation:
 
 • any: Evaluate all the guards. Evaluate any one of the blocks with a true guard. If no guard is true, evaluate the block of the else clause if it is present.
+
 • first: Evaluate the guards in order, from first to last. Upon encountering the first true guard, evaluate its associated block and stop evaluating guards. If no guard is true, evaluate the block of the else clause if it is present. Note that this is like the familiar if … else if … else semantics.
+
 • all: Evaluate the guards, in order, from first to last. After each guard evaluation, when the guard is true, evaluate its associated block. If no guard is true, evaluate the block of the else clause if it is present.
+
 • exclusive: Evaluate all the guards. If exactly one guard is true, evaluate its associated block. If no guard is true, evaluate the block of the else clause, if it is present. If more than one guard is true, or if no guard is true and no else clause is present, signal an error. 
-switch: item: The object can receive at most one of these messages, and it stores the item. This message must be the first one received, and thus (a) it precedes the case:then: messages, and (b) it cannot follow any if:then: messages.
-• case: collectionBlock then: thenBlock: This message has a behavior similar to if:then:
+
+• switch: item: The object can receive at most one of these messages, and it stores the item. This message must be the first one received, and thus (a) it precedes the case:then: messages, and (b) it cannot follow any if:then: messages.
+           • case: collectionBlock then: thenBlock: This message has a behavior similar to if:then:
 
 Select first <br />
 if: [a = 1] then: [cout << 'one!'; nl]; <br />
