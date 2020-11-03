@@ -1,10 +1,6 @@
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 FILE: Select.st
 
-NAME: Truong Pham
-
-DATE: March 7th, 2020
-
 DESCRIPTION: More than forty years ago, Edsger W. Dijkstra proposed a selection
 construct for procedural languages, now known as Dijkstra’s guarded-if [2].
 This construct consists of several blocks of code, each guarded by a boolean
